@@ -11,6 +11,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 </BrowserRouter>
   </React.StrictMode>
 );
-import { BrowserRouter } from 'react-router-dom';
+
 
 // Aisa dikhna chahiye:
