@@ -54,7 +54,7 @@ const Header = () => {
             to="/contact"
             className={`hidden md:flex items-center gap-2 px-7 py-3 rounded-full font-bold transform transition-all duration-500 shadow-lg ${
               scrolled
-                ? "bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white shadow-orange-500/30 scale-105"
+                ? "bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white shadow-green-500/30 scale-105"
                 : "bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-blue-500/20"
             } hover:scale-110 active:scale-95`}
           >
@@ -102,7 +102,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl font-bold shadow-lg transition-all duration-500 transform ${
                   scrolled
-                    ? "bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 text-white shadow-orange-500/30"
+                    ? "bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white shadow-green-500/30"
                     : "bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-blue-500/20"
                 } active:scale-95`}
               >
