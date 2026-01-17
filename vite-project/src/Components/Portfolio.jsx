@@ -130,7 +130,7 @@ const Portfolio = () => {
       {/* Stats Section - Colors updated to Blue/Green */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 sm:gap-x-4">
+          <div className="grid grid-cols-3 sm:grid-cols-3 gap-y-10 sm:gap-x-4">
             {[
               {
                 num: "50+",

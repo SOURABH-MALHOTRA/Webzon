@@ -137,7 +137,7 @@ const Home = () => {
                 solutions. We deliver excellence in every line of code.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-5">
+              <div className="flex sm:grid-cols-2 sm:flex-row gap-5">
                 <Link
                   to="/contact"
                   className="group bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center"

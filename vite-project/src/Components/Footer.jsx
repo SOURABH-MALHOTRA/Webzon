@@ -37,7 +37,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="h-auto w-55 transition-transform duration-300 hover:scale-105">
+              <div className="h-auto w-50 transition-transform duration-300 hover:scale-105">
                 <img
                   src={webzon2}
                   alt="Webzon Logo"
