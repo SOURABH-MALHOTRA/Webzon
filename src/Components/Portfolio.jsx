@@ -40,30 +40,32 @@ const Portfolio = () => {
       image: Travel,
       link: "https://traveinstein.com/",
     },
-    {
+      {
       id: 2,
-      title: "Food Ordering Website",
-      image: food,
-      link: "https://biryanibykilo.com/",
-    },
-    {
-      id: 3,
-      title: "E-Commerce Clothing Platform",
-      image: clothing,
-      link: "https://foreverbuy.in/",
-    },
-    {
-      id: 4,
-      title: "Cab Booking Service",
-      image: taxi,
-      link: "https://giexpresstaxi.co.uk/",
-    },
-    {
-      id: 5,
       title: "Footwear D2C E-Commerce Brand",
       image: shoes,
       link: "https://neemans.com/",
     },
+     {
+      id: 3,
+      title: "E-Commerce Clothing Platform",
+      image: clothing,
+      link: "https://www.beyoung.in/",
+    },
+    {
+      id: 4,
+      title: "Food Ordering Website",
+      image: food,
+      link: "https://biryanibykilo.com/",
+    },
+   
+    {
+      id: 5,
+      title: "Cab Booking Service",
+      image: taxi,
+      link: "https://giexpresstaxi.co.uk/",
+    },
+  
     {
       id: 6,
       title: "Financial Services & Investment Platform",
