@@ -20,7 +20,8 @@ import taxi from "../assets/TaxiService.png";
 import kerala from "../assets/kerla.png";
 import coaching from "../assets/coaching.png";
 import digital from "../assets/digital.png";
-
+import jewelry from "../assets/jewelry.png";
+import furniture from "../assets/furniture.png";
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -34,67 +35,80 @@ const Portfolio = () => {
   }, []);
 
   const projects = [
-    {
-      id: 1,
-      title: "AI-Powered Travel & Trip Planning Platform",
-      image: Travel,
-      link: "https://traveinstein.com/",
-    },
+  
       {
-      id: 2,
-      title: "Footwear D2C E-Commerce Brand",
+      id: 1,
+      title: "Footwear E-Commerce Brand",
       image: shoes,
       link: "https://neemans.com/",
     },
      {
-      id: 3,
+      id: 2,
       title: "E-Commerce Clothing Platform",
       image: clothing,
       link: "https://www.beyoung.in/",
     },
-    {
+     {
+      id: 3,
+      title: "E-Commerce Furniture Marketplace Platform",
+      image: furniture,
+      link: "https://www.furnishka.com/",
+    },
+      {
       id: 4,
+      title: "AI-Powered Travel & Trip Planning Platform",
+      image: Travel,
+      link: "https://traveinstein.com/",
+    },
+    {
+      id: 5,
+      title: "Jewelry E-Commerce Platform",
+      image: jewelry,
+      link: "https://www.eternz.com/",
+    },
+    {
+      id: 6,
       title: "Food Ordering Website",
       image: food,
       link: "https://biryanibykilo.com/",
     },
    
+   {
+      id: 7,
+      title: "Coaching Institute Landing Page",
+      image: coaching,
+      link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
+    },
     {
-      id: 5,
+      id: 8,
       title: "Cab Booking Service",
       image: taxi,
       link: "https://giexpresstaxi.co.uk/",
     },
-  
     {
-      id: 6,
-      title: "Financial Services & Investment Platform",
-      image: trade,
-      link: "https://unlistedsharewala.com/",
-    },
-    {
-      id: 7,
+      id: 9,
       title: "Architect Portfolio",
       image: architect,
       link: "https://malhotra-associates.vercel.app/",
     },
     {
-      id: 8,
+      id: 10,
       title: "Travel & Tour Landing Page",
       image: kerala,
       link: "https://cyberroshan.github.io/Kerala-Plan-Tours.github.io/",
     },
-    {
-      id: 9,
+  
+     {
+      id: 11,
+      title: "Financial Services & Investment Platform",
+      image: trade,
+      link: "https://unlistedsharewala.com/",
+    },
+      {
+      id: 12,
       title: "Digital Agency Website",
       image: digital,
       link: "https://www.multiverbalcreations.com/",
-    },
-    {
-      id: 10,
-      title: "Coaching Institute Landing Page",
-      image: coaching,
-      link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
     },
   ];
 
@@ -199,7 +213,7 @@ const Portfolio = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-3 rounded-full font-bold hover:shadow-xl transform hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-full font-bold hover:shadow-xl transform hover:scale-105 transition-all"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>View Live</span>
