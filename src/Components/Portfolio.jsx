@@ -10,6 +10,7 @@ import {
   TrendingUp,
   Send,
 } from "lucide-react";
+import gym from "../assets/gym.png"
 import Travel from "../assets/AITravel.png";
 import architect from "../assets/architect.png";
 import clothing from "../assets/clothing.png";
@@ -19,7 +20,6 @@ import trade from "../assets/trade.png";
 import taxi from "../assets/TaxiService.png";
 import kerala from "../assets/kerla.png";
 import coaching from "../assets/coaching.png";
-import digital from "../assets/digital.png";
 import jewelry from "../assets/jewelry.png";
 import furniture from "../assets/furniture.png";
 const Portfolio = () => {
@@ -50,66 +50,68 @@ const Portfolio = () => {
     },
      {
       id: 3,
+      title: "Modern Gym & Fitness Website Design",
+      image: gym,
+      link: "https://www.pumpnationfitness.in/",
+    },
+     {
+      id: 4,
       title: "E-Commerce Furniture Marketplace Platform",
       image: furniture,
       link: "https://www.furnishka.com/",
     },
       {
-      id: 4,
+      id: 5,
       title: "AI-Powered Travel & Trip Planning Platform",
       image: Travel,
       link: "https://traveinstein.com/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Jewelry E-Commerce Platform",
       image: jewelry,
       link: "https://www.eternz.com/",
     },
-    {
-      id: 6,
-      title: "Food Ordering Website",
-      image: food,
-      link: "https://biryanibykilo.com/",
+     {
+      id: 7,
+      title: "Cab Booking Service",
+      image: taxi,
+      link: "https://www.ranjitbrostaxi.com/",
     },
    
+   
    {
-      id: 7,
+      id: 8,
       title: "Coaching Institute Landing Page",
       image: coaching,
       link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
     },
-    {
-      id: 8,
-      title: "Cab Booking Service",
-      image: taxi,
-      link: "https://giexpresstaxi.co.uk/",
+   {
+      id: 9,
+      title: "Food Ordering Website",
+      image: food,
+      link: "https://biryanibykilo.com/",
     },
     {
-      id: 9,
+      id: 10,
       title: "Architect Portfolio",
       image: architect,
       link: "https://malhotra-associates.vercel.app/",
     },
     {
-      id: 10,
+      id: 11,
       title: "Travel & Tour Landing Page",
       image: kerala,
       link: "https://cyberroshan.github.io/Kerala-Plan-Tours.github.io/",
     },
   
      {
-      id: 11,
+      id: 12,
       title: "Financial Services & Investment Platform",
       image: trade,
       link: "https://unlistedsharewala.com/",
     },
-      {
-      id: 12,
-      title: "Digital Agency Website",
-      image: digital,
-      link: "https://www.multiverbalcreations.com/",
-    },
+     
   ];
 
   return (
