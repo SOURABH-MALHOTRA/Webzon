@@ -112,10 +112,11 @@ const Contact = () => {
     {
       icon: <Instagram className="w-7 h-7 text-pink-600" />,
       name: "Instagram",
-      href: "https://www.instagram.com/your-instagram-id",
+      href: "https://www.instagram.com/webzontech?igsh=bWZmY3l2eHB2NGJ3",
       color: "hover:bg-pink-50",
     },
   ];
+
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">

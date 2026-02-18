@@ -103,7 +103,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-500 font-medium">
-            © 2025 Webzon. All rights reserved. Built with ❤️ in India
+            © 2026 Webzon. All Rights Reserved.
           </p>
         </div>
       </div>

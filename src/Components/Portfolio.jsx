@@ -36,42 +36,44 @@ const Portfolio = () => {
 
   const projects = [
   
-      {
-      id: 1,
-      title: "Footwear E-Commerce Brand",
-      image: shoes,
-      link: "https://neemans.com/",
-    },
      {
-      id: 2,
+      id: 1,
       title: "E-Commerce Clothing Platform",
       image: clothing,
       link: "https://www.beyoung.in/",
     },
      {
-      id: 3,
+      id: 2,
       title: "Modern Gym & Fitness Website Design",
       image: gym,
       link: "https://www.pumpnationfitness.in/",
     },
      {
-      id: 4,
+      id: 3,
       title: "E-Commerce Furniture Marketplace Platform",
       image: furniture,
       link: "https://www.furnishka.com/",
     },
+     {
+      id: 4,
+      title: "Jewelry E-Commerce Platform",
+      image: jewelry,
+      link: "https://www.eternz.com/",
+    },
+   
       {
       id: 5,
       title: "AI-Powered Travel & Trip Planning Platform",
       image: Travel,
       link: "https://traveinstein.com/",
     },
-    {
+      {
       id: 6,
-      title: "Jewelry E-Commerce Platform",
-      image: jewelry,
-      link: "https://www.eternz.com/",
+      title: "Footwear E-Commerce Brand",
+      image: shoes,
+      link: "https://neemans.com/",
     },
+  
      {
       id: 7,
       title: "Cab Booking Service",
