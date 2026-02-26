@@ -35,44 +35,45 @@ const Portfolio = () => {
   }, []);
 
   const projects = [
+    {
+      id: 1,
+      title: "Footwear E-Commerce Brand",
+      image: shoes,
+      link: "https://hitz.co.in/",
+    },
   
      {
-      id: 1,
+      id: 2,
       title: "E-Commerce Clothing Platform",
       image: clothing,
       link: "https://www.beyoung.in/",
     },
      {
-      id: 2,
+      id: 3,
       title: "Modern Gym & Fitness Website Design",
       image: gym,
       link: "https://www.pumpnationfitness.in/",
     },
      {
-      id: 3,
+      id: 4,
       title: "E-Commerce Furniture Marketplace Platform",
       image: furniture,
       link: "https://www.furnishka.com/",
     },
      {
-      id: 4,
+      id: 5,
       title: "Jewelry E-Commerce Platform",
       image: jewelry,
       link: "https://www.eternz.com/",
     },
    
       {
-      id: 5,
+      id: 6,
       title: "AI-Powered Travel & Trip Planning Platform",
       image: Travel,
       link: "https://traveinstein.com/",
     },
-      {
-      id: 6,
-      title: "Footwear E-Commerce Brand",
-      image: shoes,
-      link: "https://neemans.com/",
-    },
+      
   
      {
       id: 7,
@@ -183,7 +184,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid - Border & Hover Colors updated */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-15 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (

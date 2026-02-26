@@ -76,7 +76,7 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
-        alert("Message send nahi hua");
+        alert("Message not sent");
       });
   };
 
