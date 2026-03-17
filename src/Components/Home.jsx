@@ -226,17 +226,17 @@ const Home = () => {
           <div className="grid grid-cols-4 lg:grid-cols-4 gap-8 md:gap-12 text-center text-white justify-items-center">
             {[
               {
-                num: "50+",
+                num: "30+",
                 label: "Projects Done",
                 icon: <CheckCircle className="w-10 h-10 mx-auto mb-4" />,
               },
               {
-                num: "35+",
+                num: "25+",
                 label: "Happy Clients",
                 icon: <Users className="w-10 h-10 mx-auto mb-4" />,
               },
               {
-                num: "9+",
+                num: "8+",
                 label: "Expert Team",
                 icon: <Award className="w-10 h-10 mx-auto mb-4" />,
               },

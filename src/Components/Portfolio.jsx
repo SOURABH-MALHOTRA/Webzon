@@ -154,12 +154,12 @@ const Portfolio = () => {
           <div className="grid grid-cols-3 sm:grid-cols-3 gap-y-10 sm:gap-x-4">
             {[
               {
-                num: "50+",
+                num: "30+",
                 label: "Projects Completed",
                 icon: <CheckCircle className="w-10 h-10" />,
               },
               {
-                num: "35+",
+                num: "25+",
                 label: "Happy Clients",
                 icon: <Users className="w-10 h-10" />,
               },
