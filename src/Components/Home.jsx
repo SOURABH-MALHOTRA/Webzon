@@ -18,12 +18,17 @@ import {
   Rocket,
   Code2,
   Send,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // Missing state added
+  const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +38,6 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Services with colors matching the Webzon logo (Blue & Green shades)
   const services = [
     {
       icon: <Smartphone className="w-10 h-10" />,
@@ -109,9 +113,54 @@ const Home = () => {
     },
   ];
 
+  const testimonials = [
+  {
+    name: "Ayush Verma",
+    role: "Founder, Faith & Fast",
+    content:
+      "Webzon transformed our vision for Faith & Fast into a high converting e-commerce store. The seamless shopping experience they built for our clothing brand has significantly improved our customer retention.",
+  },
+  {
+    name: "Ankit Kumar",
+    role: "Managing Director, Malhotra Associates",
+    content:
+      "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium and modern touch.",
+  },
+  {
+    name: "Parul Nagpal",
+    role: "Founder, Home Essentials by TFB",
+    content:
+      "The team developed a robust and user friendly platform for our home essentials business. The catalog management and secure payment integration have made running our online store incredibly easy.",
+  },
+  {
+    name: "Sandeep Kumar",
+    role: "Founder, Pump Nation Gym",
+    content:
+      "Our online presence has reached a new level with Webzon. The Pump Nation Gym website is fast, mobile responsive, and helps us manage new memberships and inquiries effortlessly.",
+  },
+  {
+    name: "Ranjit Singh",
+    role: "CEO, Ranjit Bros Taxi Services",
+    content:
+      "Managing a fleet was a challenge until we got our new website. The automated booking system they built for Ranjit Bros Taxi Services is reliable and has streamlined our entire rental process.",
+  },
+];
+
+  // Missing logic functions added
+  const nextSlide = () =>
+    setActiveSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+  const prevSlide = () =>
+    setActiveSlide((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+
+  // Auto-slide effect
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden font-sans">
-      {/* Hero Section - Changed orange-50 to blue-50/green-50 */}
+      {/* Hero Section */}
       <div className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20 animate-pulse-slow"></div>
@@ -126,7 +175,6 @@ const Home = () => {
             <div className="space-y-8 animate-fadeInUp">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
                 Build The
-                {/* Logo Gradient: Blue to Green */}
                 <span className="block bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 bg-clip-text text-transparent animate-gradient">
                   Future Today
                 </span>
@@ -168,7 +216,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Side - Mockup */}
             <div className="relative lg:h-[600px] hidden lg:flex items-center justify-center">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
 
@@ -219,7 +266,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Stats Section - Changed to Logo Blue-Green Gradient */}
+      {/* Stats Section */}
       <section className="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-green-600 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/5"></div>
         <div className="max-w-5xl mx-auto relative z-10">
@@ -306,12 +353,85 @@ const Home = () => {
         </div>
       </div>
 
-      {/* CTA Section - Dark Blue Theme */}
-      {/* CTA Section - Fixed Text Clipping */}
-      {/* Home Page CTA - Midnight Tech */}
-      {/* Home CTA - Midnight Tech */}
-      {/* Home CTA - Midnight Tech Theme */}
-      {/* Home CTA - Service Page Style (Box Design) */}
+      {/* --- TESTIMONIALS SECTION --- */}
+      <section className="py-5 bg-gradient-to-b from-white to-blue-50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center lg:mb-7 ">
+            <div className="inline-block bg-green-50 text-green-600 px-6 py-2 rounded-full font-bold text-sm mb-4 uppercase tracking-widest">
+              Testimonials
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900">
+              Client <span className="text-blue-600">Success Stories</span>
+            </h2>
+          </div>
+
+          {/* --- SLIDER WITH BUTTONS ON ENDS --- */}
+          <div className="relative group max-w-5xl mx-auto px-4 md:px-12">
+            {/* Testimonial Card Container */}
+            <div className="relative overflow-hidden h-[450px] md:h-[350px]">
+              {testimonials.map((t, id) => (
+                <div
+                  key={id}
+                  className={`absolute inset-0 transition-all duration-700 ease-in-out transform flex items-center justify-center ${
+                    id === activeSlide
+                      ? "opacity-100 translate-x-0 scale-100"
+                      : "opacity-0 translate-x-full scale-95"
+                  }`}
+                >
+                  <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 hover:border-blue-200 transition-all text-center flex flex-col items-center max-w-2xl mx-auto">
+                    <div className="flex gap-1 mb-4 text-blue-600">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={16} fill="currentColor" />
+                      ))}
+                    </div>
+                    <Quote className="w-10 h-10 text-blue-100 mb-4" />
+                    <p className="text-gray-700 italic mb-8 leading-relaxed text-lg md:text-xl">
+                      "{t.content}"
+                    </p>
+                    <div className="flex items-center justify-center text-center">
+                      <div>
+                        <h4 className="font-black text-gray-900 text-base">
+                          {t.name}
+                        </h4>
+                        <p className="text-xs text-blue-600 font-bold uppercase tracking-wider mt-1">
+                          {t.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Slider Buttons on Ends */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 bg-white p-3 rounded-full shadow-xl text-blue-600 hover:bg-blue-600 hover:text-white transition-all z-20 border border-blue-50 opacity-0 group-hover:opacity-100 md:opacity-100"
+            >
+              <ChevronLeft size={28} strokeWidth={3} />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 bg-white p-3 rounded-full shadow-xl text-blue-600 hover:bg-blue-600 hover:text-white transition-all z-20 border border-blue-50 opacity-0 group-hover:opacity-100 md:opacity-100"
+            >
+              <ChevronRight size={28} strokeWidth={3} />
+            </button>
+
+            {/* Dot Indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {testimonials.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-2 rounded-full transition-all duration-300 ${activeSlide === i ? "w-8 bg-blue-600" : "w-2 bg-blue-200"}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="bg-[#0a192f] rounded-[3rem] p-10 md:p-16 relative overflow-hidden shadow-2xl border border-white/5">
@@ -353,6 +473,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <style>{`
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
