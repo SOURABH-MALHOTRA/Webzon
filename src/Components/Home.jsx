@@ -121,7 +121,7 @@ const Home = () => {
       "Webzon transformed our vision for Faith & Fast into a high converting e-commerce store. The seamless shopping experience they built for our clothing brand has significantly improved our customer retention.",
   },
   {
-    name: "Ankit Kumar",
+    name: "Ankit Malhotra",
     role: "Managing Director, Malhotra Associates",
     content:
       "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium and modern touch.",
@@ -356,7 +356,7 @@ const Home = () => {
       {/* --- TESTIMONIALS SECTION --- */}
       <section className="py-5 bg-gradient-to-b from-white to-blue-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center lg:mb-7 ">
+          <div className="text-center mb-6  ">
             <div className="inline-block bg-green-50 text-green-600 px-6 py-2 rounded-full font-bold text-sm mb-4 uppercase tracking-widest">
               Testimonials
             </div>
