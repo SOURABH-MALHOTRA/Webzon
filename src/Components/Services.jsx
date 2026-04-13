@@ -225,7 +225,7 @@ const Services = () => {
       </section>
 
       {/* Our Process */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-15 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-600 px-6 py-2 rounded-full font-bold text-sm mb-6">
@@ -265,7 +265,7 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+      <section className="py-15 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-700 px-6 py-2 rounded-full font-bold text-sm mb-6">

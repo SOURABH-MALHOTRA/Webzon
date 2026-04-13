@@ -316,7 +316,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <div className="py-24 bg-white px-4 sm:px-6 lg:px-8 relative">
+      <div className="py-15 bg-white px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="inline-block bg-blue-50 text-blue-600 px-6 py-2 rounded-full font-bold text-sm mb-6 uppercase tracking-widest">
