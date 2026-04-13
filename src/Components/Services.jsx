@@ -19,6 +19,10 @@ import {
   Package,
   Layers,
   Globe,
+  Layout, 
+  ShoppingBag, 
+  CodeXml, 
+  PenTool
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -36,62 +40,63 @@ const Services = () => {
   }, []);
 
   // Gradients updated to match Blue-Green Logo Theme
-  const services = [
-    {
-      icon: <Smartphone className="w-12 h-12" />,
-      title: "Android Development",
-      shortDesc: "Native Android apps with cutting-edge features",
-      gradient: "from-green-500 to-emerald-600",
-    },
-    {
-      icon: <Smartphone className="w-12 h-12" />,
-      title: "iOS Development",
-      shortDesc: "Premium iOS applications for Apple ecosystem",
-      gradient: "from-blue-500 to-indigo-600",
-    },
-    {
-      icon: <Code className="w-12 h-12" />,
-      title: "Custom Software Development",
-      shortDesc: "Tailored enterprise solutions for unique needs",
-      gradient: "from-blue-600 to-cyan-600",
-    },
-    {
-      icon: <Monitor className="w-12 h-12" />,
-      title: "Website Development",
-      shortDesc: "Lightning-fast, SEO-optimized responsive websites",
-      gradient: "from-blue-600 to-green-500",
-    },
-    {
-      icon: <Smartphone className="w-12 h-12" />,
-      title: "Mobile App Development",
-      shortDesc: "Cross-platform apps that work everywhere",
-      gradient: "from-emerald-500 to-teal-600",
-    },
-    {
-      icon: <Cloud className="w-12 h-12" />,
-      title: "SaaS Development",
-      shortDesc: "Scalable cloud platforms that grow with you",
-      gradient: "from-cyan-500 to-blue-600",
-    },
-    {
-      icon: <Palette className="w-12 h-12" />,
-      title: "Web Design",
-      shortDesc: "Beautiful UI/UX that converts",
-      gradient: "from-blue-400 to-green-400",
-    },
-    {
-      icon: <Palette className="w-12 h-12" />,
-      title: "Logo Design",
-      shortDesc: "Memorable brand identities",
-      gradient: "from-blue-700 to-blue-900",
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12" />,
-      title: "Search Engine Optimization (SEO)",
-      shortDesc: "Rank higher and drive organic growth with data-driven SEO",
-      gradient: "from-slate-600 to-slate-500",
-    },
-  ];
+ const services = [
+  {
+    icon: <Smartphone className="w-12 h-12" />,
+    title: "Mobile App Development",
+    shortDesc: "High performance native and cross platform mobile applications for Android and iOS",
+    gradient: "from-green-500 to-emerald-600",
+  },
+  {
+    icon: <Layout className="w-12 h-12" />,
+    title: "WordPress Development",
+    shortDesc: "Professional CMS solutions with custom themes and plugins",
+    gradient: "from-blue-500 to-indigo-600",
+  },
+  {
+    icon: <ShoppingBag className="w-12 h-12" />,
+    title: "Shopify Store",
+    shortDesc: "Feature rich e-commerce stores designed for high conversions",
+    gradient: "from-blue-600 to-cyan-600",
+  },
+   {
+    icon: <Monitor className="w-12 h-12" />,
+    title: "Website Development",
+    shortDesc: "Lightning fast SEO optimized responsive websites",
+    gradient: "from-emerald-500 to-teal-600",
+  },
+  {
+    icon: <CodeXml className="w-12 h-12" />,
+    title: "Custom Software Development",
+    shortDesc: "Tailored enterprise solutions for unique needs",
+    gradient: "from-blue-600 to-green-500",
+  },
+ 
+  {
+    icon: <Cloud className="w-12 h-12" />,
+    title: "SaaS Development",
+    shortDesc: "Scalable cloud platforms that grow with you",
+    gradient: "from-cyan-500 to-blue-600",
+  },
+  {
+    icon: <Palette className="w-12 h-12" />,
+    title: "Web Design",
+    shortDesc: "Beautiful UI UX that converts",
+    gradient: "from-blue-400 to-green-400",
+  },
+  {
+    icon: <PenTool className="w-12 h-12" />,
+    title: "Logo Design",
+    shortDesc: "Memorable brand identities",
+    gradient: "from-blue-700 to-blue-900",
+  },
+  {
+    icon: <TrendingUp className="w-12 h-12" />,
+    title: "Search Engine Optimization (SEO)",
+    shortDesc: "Rank higher and drive organic growth with data driven SEO",
+    gradient: "from-slate-600 to-slate-500",
+  },
+];
 
   const process = [
     {

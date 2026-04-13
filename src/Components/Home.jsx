@@ -21,6 +21,9 @@ import {
   Quote,
   ChevronLeft,
   ChevronRight,
+  ShoppingBag,Layout, 
+  CodeXml, 
+  PenTool
 } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -38,37 +41,38 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const services = [
-    {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: "Android Development",
-      desc: "High-performance native Android apps with modern Material Design",
-      color: "from-blue-600 to-blue-800",
-    },
-    {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: "iOS Development",
-      desc: "Premium iOS applications optimized for iPhone & iPad",
-      color: "from-blue-500 to-blue-700",
-    },
-    {
-      icon: <Code className="w-10 h-10" />,
-      title: "Custom Software",
-      desc: "Enterprise-grade custom solutions built for your unique needs",
-      color: "from-blue-700 to-green-600",
-    },
-    {
-      icon: <Monitor className="w-10 h-10" />,
-      title: "Website Development",
-      desc: "Lightning-fast, SEO-optimized responsive websites",
-      color: "from-green-500 to-green-700",
-    },
+ const services = [
     {
       icon: <Smartphone className="w-10 h-10" />,
       title: "Mobile App Development",
-      desc: "Cross-platform apps with React Native & Flutter",
-      color: "from-blue-600 to-green-500",
+      desc: "High performance native and cross platform apps for Android and iOS",
+      color: "from-blue-600 to-blue-800",
     },
+    {
+      icon: <Layout className="w-10 h-10" />, // WordPress ke liye Layout icon
+      title: "WordPress Development",
+      desc: "Professional CMS solutions with custom themes and plugins",
+      color: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: <ShoppingBag className="w-10 h-10" />, 
+      title: "Shopify Store",
+      desc: "Feature rich e-commerce stores designed for high conversions",
+      color: "from-green-500 to-green-700",
+    },
+     {
+      icon: <Monitor className="w-10 h-10" />, // Website ke liye Monitor rehne dete hain
+      title: "Website Development",
+      desc: "Lightning fast, SEO optimized responsive websites",
+      color: "from-green-500 to-green-700",
+    },
+    {
+      icon: <CodeXml className="w-10 h-10" />, // Custom software ke liye CodeXml
+      title: "Custom Software",
+      desc: "Enterprise grade custom solutions built for your unique needs",
+      color: "from-blue-700 to-green-600",
+    },
+   
     {
       icon: <Cloud className="w-10 h-10" />,
       title: "SaaS Development",
@@ -78,11 +82,11 @@ const Home = () => {
     {
       icon: <Palette className="w-10 h-10" />,
       title: "Web Design",
-      desc: "Stunning UI/UX designs that convert visitors to customers",
+      desc: "Stunning UI UX designs that convert visitors to customers",
       color: "from-green-400 to-green-600",
     },
     {
-      icon: <Palette className="w-10 h-10" />,
+      icon: <PenTool className="w-10 h-10" />, // Logo ke liye PenTool zyada suit karega
       title: "Logo Design",
       desc: "Memorable brand identities that stand out in the market",
       color: "from-blue-500 to-green-400",
@@ -94,7 +98,6 @@ const Home = () => {
       color: "from-green-600 to-blue-600",
     },
   ];
-
   const features = [
     {
       icon: <Zap className="w-8 h-8" />,
@@ -115,22 +118,22 @@ const Home = () => {
 
   const testimonials = [
   {
-    name: "Ayush Verma",
-    role: "Founder, Faith & Fast",
+    name: "Deepak Kumar",
+    role: "Founder, Hitz",
     content:
-      "Webzon transformed our vision for Faith & Fast into a high converting e-commerce store. The seamless shopping experience they built for our clothing brand has significantly improved our customer retention.",
+      "Webzon transformed our vision for Hitz a footwear brand into a high converting e-commerce website. The seamless shopping experience reflects our brand identity. It enhanced customer trust.",
   },
   {
     name: "Ankit Malhotra",
     role: "Managing Director, Malhotra Associates",
     content:
-      "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium and modern touch.",
+      "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium modern feel.",
   },
   {
     name: "Parul Nagpal",
     role: "Founder, Home Essentials by TFB",
     content:
-      "The team developed a robust and user friendly platform for our home essentials business. The catalog management and secure payment integration have made running our online store incredibly easy.",
+      "The team developed a robust and user friendly platform for our home essentials business. The catalog management and secure payment integration have made running our online store simple.",
   },
   {
     name: "Sandeep Kumar",
@@ -356,7 +359,7 @@ const Home = () => {
       {/* --- TESTIMONIALS SECTION --- */}
       <section className="py-5 bg-gradient-to-b from-white to-blue-50 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6  ">
+          <div className="text-center mb-6 ">
             <div className="inline-block bg-green-50 text-green-600 px-6 py-2 rounded-full font-bold text-sm mb-4 uppercase tracking-widest">
               Testimonials
             </div>
