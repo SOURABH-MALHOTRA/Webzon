@@ -75,19 +75,19 @@ const Services = () => {
   {
     icon: <Cloud className="w-12 h-12" />,
     title: "SaaS Development",
-    shortDesc: "Scalable cloud platforms that grow with you",
+    shortDesc: "Scalable cloud platforms that grow with your business",
     gradient: "from-cyan-500 to-blue-600",
   },
   {
     icon: <Palette className="w-12 h-12" />,
-    title: "Web Design",
-    shortDesc: "Beautiful UI UX that converts",
+    title: "UI/UX Design",
+    shortDesc: "Stunning UI/UX designs that convert visitors to customers",
     gradient: "from-blue-400 to-green-400",
   },
   {
     icon: <PenTool className="w-12 h-12" />,
     title: "Logo Design",
-    shortDesc: "Memorable brand identities",
+    shortDesc: "Memorable brand identities that stand out in the market",
     gradient: "from-blue-700 to-blue-900",
   },
   {

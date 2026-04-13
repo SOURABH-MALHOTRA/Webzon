@@ -82,8 +82,8 @@ const Home = () => {
     },
     {
       icon: <Palette className="w-10 h-10" />,
-      title: "Web Design",
-      desc: "Stunning UI UX designs that convert visitors to customers",
+      title: "UI/UX Design",
+      desc: "Stunning UI/UX designs that convert visitors to customers",
       color: "from-green-400 to-green-600",
     },
     {
@@ -95,7 +95,7 @@ const Home = () => {
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Search Engine Optimization (SEO)",
-      desc: "Boost your search rankings and drive organic traffic.",
+      desc: "Boost your search rankings and drive organic traffic",
       color: "from-green-600 to-blue-600",
     },
   ];
