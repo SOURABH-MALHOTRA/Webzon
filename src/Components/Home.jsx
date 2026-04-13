@@ -21,9 +21,10 @@ import {
   Quote,
   ChevronLeft,
   ChevronRight,
-  ShoppingBag,Layout, 
-  CodeXml, 
-  PenTool
+  ShoppingBag,
+  Layout,
+  CodeXml,
+  PenTool,
 } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -41,7 +42,7 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- const services = [
+  const services = [
     {
       icon: <Smartphone className="w-10 h-10" />,
       title: "Mobile App Development",
@@ -55,12 +56,12 @@ const Home = () => {
       color: "from-blue-500 to-blue-700",
     },
     {
-      icon: <ShoppingBag className="w-10 h-10" />, 
+      icon: <ShoppingBag className="w-10 h-10" />,
       title: "Shopify Store",
       desc: "Feature rich e-commerce stores designed for high conversions",
       color: "from-green-500 to-green-700",
     },
-     {
+    {
       icon: <Monitor className="w-10 h-10" />, // Website ke liye Monitor rehne dete hain
       title: "Website Development",
       desc: "Lightning fast, SEO optimized responsive websites",
@@ -72,7 +73,7 @@ const Home = () => {
       desc: "Enterprise grade custom solutions built for your unique needs",
       color: "from-blue-700 to-green-600",
     },
-   
+
     {
       icon: <Cloud className="w-10 h-10" />,
       title: "SaaS Development",
@@ -117,37 +118,37 @@ const Home = () => {
   ];
 
   const testimonials = [
-  {
-    name: "Deepak Kumar",
-    role: "Founder, Hitz",
-    content:
-      "Webzon transformed our vision for Hitz a footwear brand into a high converting e-commerce website. The seamless shopping experience reflects our brand identity. It enhanced customer trust.",
-  },
-  {
-    name: "Ankit Malhotra",
-    role: "Managing Director, Malhotra Associates",
-    content:
-      "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium modern feel.",
-  },
-  {
-    name: "Parul Nagpal",
-    role: "Founder, Home Essentials by TFB",
-    content:
-      "The team developed a robust and user friendly platform for our home essentials business. The catalog management and secure payment integration have made running our online store simple.",
-  },
-  {
-    name: "Sandeep Kumar",
-    role: "Founder, Pump Nation Gym",
-    content:
-      "Our online presence has reached a new level with Webzon. The Pump Nation Gym website is fast, mobile responsive, and helps us manage new memberships and inquiries effortlessly.",
-  },
-  {
-    name: "Ranjit Singh",
-    role: "CEO, Ranjit Bros Taxi Services",
-    content:
-      "Managing a fleet was a challenge until we got our new website. The automated booking system they built for Ranjit Bros Taxi Services is reliable and has streamlined our entire rental process.",
-  },
-];
+    {
+      name: "Deepak Kumar",
+      role: "Founder, Hitz",
+      content:
+        "Webzon transformed our vision for Hitz a footwear brand into a high converting e-commerce website. The seamless shopping experience reflects our brand identity. It enhanced customer trust.",
+    },
+    {
+      name: "Ankit Malhotra",
+      role: "Managing Director, Malhotra Associates",
+      content:
+        "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium modern feel.",
+    },
+    {
+      name: "Parul Nagpal",
+      role: "Founder, Home Essentials by TFB",
+      content:
+        "The team developed a robust and user friendly platform for our home essentials business. The catalog management and secure payment integration have made running our online store simple.",
+    },
+    {
+      name: "Sandeep Kumar",
+      role: "Founder, Pump Nation Gym",
+      content:
+        "Our online presence has reached a new level with Webzon. The Pump Nation Gym website is fast, mobile responsive, and helps us manage new memberships and inquiries effortlessly.",
+    },
+    {
+      name: "Ranjit Singh",
+      role: "CEO, Ranjit Bros Taxi Services",
+      content:
+        "Managing a fleet was a challenge until we got our new website. The automated booking system they built for Ranjit Bros Taxi Services is reliable and has streamlined our entire rental process.",
+    },
+  ];
 
   // Missing logic functions added
   const nextSlide = () =>
@@ -188,17 +189,18 @@ const Home = () => {
                 solutions. We deliver excellence in every line of code.
               </p>
 
-              <div className="flex sm:grid-cols-2 sm:flex-row gap-5">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto">
                 <Link
                   to="/contact"
-                  className="group bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 text-white px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center"
+                  className="group bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center text-center"
                 >
                   Start Your Project
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
+
                 <Link
                   to="/portfolio"
-                  className="border-3 border-blue-600 text-blue-700 px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-50 hover:shadow-xl transition-all"
+                  className="border-[3px] border-blue-600 text-blue-700 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 hover:shadow-xl transition-all text-center flex items-center justify-center"
                 >
                   View Portfolio
                 </Link>
