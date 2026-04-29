@@ -85,7 +85,7 @@ const Contact = () => {
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Phone",
-      details: ["+91 9034145122"],
+      details: ["+91 90341 45122"],
       gradient: "from-blue-600 to-blue-800",
     },
     {

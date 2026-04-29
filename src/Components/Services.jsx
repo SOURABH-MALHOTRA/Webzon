@@ -146,12 +146,12 @@ const Services = () => {
     {
       icon: <Users className="w-10 h-10" />,
       title: "Expert Team",
-      desc: "50+ skilled professionals at your service",
+      desc: "8+ skilled professionals at your service",
     },
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Proven Results",
-      desc: "500+ successful projects delivered",
+      desc: "30+ successful projects delivered",
     },
     {
       icon: <Star className="w-10 h-10" />,
