@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Menu,
   X,
@@ -26,21 +26,10 @@ import {
   CodeXml,
   PenTool,
 } from "lucide-react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  // Missing state added
   const [activeSlide, setActiveSlide] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const services = [
     {
@@ -158,9 +147,12 @@ const Home = () => {
 
   // Auto-slide effect
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
+
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden font-sans">
@@ -177,20 +169,23 @@ const Home = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-fadeInUp">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
+              <div data-hero-badge className="inline-flex items-center rounded-full border border-blue-200 bg-white/80 px-4 py-1.5 text-sm font-semibold text-blue-700 shadow-sm">
+                Digital Product Studio
+              </div>
+              <h1 data-hero-title className="text-4xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-tight">
                 Build The
                 <span className="block bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 bg-clip-text text-transparent animate-gradient">
                   Future Today
                 </span>
               </h1>
 
-              <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed font-medium">
+              <p data-hero-text className="text-lg sm:text-2xl text-gray-600 leading-relaxed font-medium max-w-xl">
                 Transform your vision into reality with cutting-edge software
                 solutions. We deliver excellence in every line of code.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto">
-                <Link
+                <Link data-hero-cta
                   to="/contact"
                   className="group bg-gradient-to-r from-blue-600 via-blue-700 to-green-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:shadow-2xl transform hover:scale-105 transition-all flex items-center justify-center text-center"
                 >
@@ -198,7 +193,7 @@ const Home = () => {
                   <ArrowRight className="ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
                 </Link>
 
-                <Link
+                <Link data-hero-cta
                   to="/portfolio"
                   className="border-[3px] border-blue-600 text-blue-700 px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg hover:bg-blue-50 hover:shadow-xl transition-all text-center flex items-center justify-center"
                 >
@@ -208,7 +203,7 @@ const Home = () => {
 
               <div className="grid grid-cols-3 gap-6 pt-8">
                 {features.map((feature, idx) => (
-                  <div key={idx} className="text-center group cursor-pointer">
+                  <div key={idx} data-hero-feature className="text-center group cursor-pointer">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-green-500 rounded-2xl text-white mb-3 group-hover:scale-110 transition-transform shadow-lg">
                       {feature.icon}
                     </div>
@@ -272,10 +267,10 @@ const Home = () => {
       </div>
 
       {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-green-600 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-20 sm:py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-green-600 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/5"></div>
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="grid grid-cols-4 lg:grid-cols-4 gap-8 md:gap-12 text-center text-white justify-items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center text-white justify-items-center">
             {[
               {
                 num: "30+",
@@ -300,6 +295,7 @@ const Home = () => {
             ].map((stat, idx) => (
               <div
                 key={idx}
+                data-stat-card
                 className="transform hover:scale-110 transition-all duration-300"
               >
                 {stat.icon}
