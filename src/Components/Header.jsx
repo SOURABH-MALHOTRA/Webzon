@@ -70,6 +70,9 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation-menu"
           >
             {isMenuOpen ? (
               <X className="w-7 h-7" />
@@ -82,7 +85,10 @@ const Header = () => {
 
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t shadow-2xl absolute w-full left-0 top-20">
+        <div
+          id="mobile-navigation-menu"
+          className="md:hidden bg-white border-t shadow-2xl absolute w-full left-0 top-20"
+        >
           <div className="px-4 py-6 flex flex-col space-y-3">
             {["Home", "About", "Services", "Portfolio", "Contact"].map(
               (item) => (
