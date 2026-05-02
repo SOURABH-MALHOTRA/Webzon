@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   Mail,
@@ -14,6 +14,7 @@ import {
 import webzon2 from "../assets/webzon2.png";
 
 const Footer = () => {
+  const footerRef = useRef(null);
   const links = [
     { name: "Home", path: "/", icon: <Home className="w-4 h-4" /> },
     { name: "About", path: "/about", icon: <Info className="w-4 h-4" /> },
@@ -30,12 +31,37 @@ const Footer = () => {
     { name: "Contact", path: "/contact", icon: <Send className="w-4 h-4" /> },
   ];
 
+  useEffect(() => {
+    const gsap = window.gsap;
+    if (!gsap || !footerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from("[data-footer-col]", {
+        y: 28,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.16,
+        ease: "power3.out",
+      });
+      gsap.from("[data-footer-bottom]", {
+        opacity: 0,
+        y: 14,
+        duration: 0.5,
+        delay: 0.45,
+      });
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <footer className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+    <footer ref={footerRef} className="bg-gray-900 text-white pt-16 pb-10 px-4 sm:px-6 lg:px-8 border-t border-gray-800 relative overflow-hidden">
+      <div className="absolute -top-24 right-0 w-72 h-72 rounded-full bg-blue-500/15 blur-3xl" />
+      <div className="absolute -bottom-24 left-0 w-72 h-72 rounded-full bg-green-500/15 blur-3xl" />
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo Section */}
-          <div className="md:col-span-2">
+          <div data-footer-col className="md:col-span-2">
             <div className="flex items-center mb-6">
               <div className="h-auto w-50 transition-transform duration-300 hover:scale-105">
                 <img
@@ -52,7 +78,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Section - Blue to Green Gradient */}
-          <div>
+          <div data-footer-col>
             <h3 className="font-black text-xl mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
               Quick Links
             </h3>
@@ -75,7 +101,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Section - Icons updated to Blue */}
-          <div>
+          <div data-footer-col>
             <h3 className="font-black text-xl mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
               Contact Us
             </h3>
@@ -101,7 +127,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-gray-800 pt-8 text-center">
+        <div data-footer-bottom className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-500 font-medium">
             © 2026 Webzon. All Rights Reserved.
           </p>
