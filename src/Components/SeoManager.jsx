@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const BASE_URL = "https://webzon.in";
+const BASE_URL = "https://webzon.co.in";
 
 const pageSeo = {
   "/": {
