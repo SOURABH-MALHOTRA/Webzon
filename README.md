@@ -1,16 +1,65 @@
-# React + Vite
+# Webzon Software
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Webzon Software is a modern React + Vite website for a software agency. It showcases services, portfolio projects, company information, and a contact form for leads.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive multi-page website using React Router
+- Service showcase (web, mobile, SaaS, SEO, UI/UX, and more)
+- Portfolio section with live project links
+- Contact form integration with EmailJS
+- SEO support via sitemap, robots, and SEO component
+- Tailwind-based modern UI/UX styling
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 7
+- React Router DOM
+- Tailwind CSS 4
+- Lucide React icons
+- EmailJS
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/App.jsx` – App routes
+- `src/Layout.jsx` – Shared page layout
+- `src/Components/` – Main page and reusable UI sections
+- `public/` – Static assets such as `robots.txt` and `sitemap.xml`
+
+## 🚀 Getting Started
+
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Start development server
+
+```bash
+npm run dev
+```
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview production build
+
+```bash
+npm run preview
+```
+
+## 📬 Contact
+
+For project inquiries, collaborations, or business discussions:
+
+- **Email:** sourabhmalhotra137@gmail.com
+- **Phone:** +91 90341 45122
+
+---
+
+Built with ❤️ by Webzon Software.
