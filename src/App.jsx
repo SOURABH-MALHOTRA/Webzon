@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import Home from "./Components/Home.jsx";
-import About from './Components/About.jsx';
-import Services from './Components/Services.jsx';
-import Contact from './Components/Contact.jsx';
-import Portfolio  from './Components/Portfolio.jsx';
+const Home = lazy(() => import("./Components/Home.jsx"));
+const About = lazy(() => import("./Components/About.jsx"));
+const Services = lazy(() => import("./Components/Services.jsx"));
+const Contact = lazy(() => import("./Components/Contact.jsx"));
+const Portfolio = lazy(() => import("./Components/Portfolio.jsx"));
 
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="portfolio" element={<Portfolio />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading…</div>}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="portfolio" element={<Portfolio />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 };
 

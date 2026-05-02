@@ -395,9 +395,9 @@ const Home = () => {
                     </p>
                     <div className="flex items-center justify-center text-center">
                       <div>
-                        <h4 className="font-black text-gray-900 text-base">
+                        <p className="font-black text-gray-900 text-base">
                           {t.name}
-                        </h4>
+                        </p>
                         <p className="text-xs text-blue-600 font-bold uppercase tracking-wider mt-1">
                           {t.role}
                         </p>
@@ -411,6 +411,7 @@ const Home = () => {
             {/* Slider Buttons on Ends */}
             <button
               onClick={prevSlide}
+              aria-label="Previous testimonial"
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 bg-white p-3 rounded-full shadow-xl text-blue-600 hover:bg-blue-600 hover:text-white transition-all z-20 border border-blue-50 opacity-0 group-hover:opacity-100 md:opacity-100"
             >
               <ChevronLeft size={28} strokeWidth={3} />
@@ -418,6 +419,7 @@ const Home = () => {
 
             <button
               onClick={nextSlide}
+              aria-label="Next testimonial"
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 bg-white p-3 rounded-full shadow-xl text-blue-600 hover:bg-blue-600 hover:text-white transition-all z-20 border border-blue-50 opacity-0 group-hover:opacity-100 md:opacity-100"
             >
               <ChevronRight size={28} strokeWidth={3} />

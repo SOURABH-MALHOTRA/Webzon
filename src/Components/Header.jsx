@@ -30,6 +30,8 @@ const Header = () => {
             <img
               src={webzon}
               alt="Webzon Logo"
+              width="180"
+              height="64"
               className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
