@@ -91,7 +91,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-8 h-8" />,
       title: "Email",
-      details: ["sourabhmalhotra137@gmail.com"],
+      details: ["info@webzon.co.in"],
       gradient: "from-blue-700 to-green-600",
     },
     {

@@ -83,13 +83,13 @@ const Footer = () => {
               <li className="flex items-start gap-3 group">
                 <Mail className="w-5 h-5 text-blue-500 mt-0.5 group-hover:scale-110 transition-transform group-hover:text-green-400" />
                 <span className="font-medium hover:text-white transition-colors cursor-pointer break-all">
-                  sourabhmalhotra137@gmail.com
+                  info@webzon.co.in
                 </span>
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-blue-500 group-hover:scale-110 transition-transform group-hover:text-green-400" />
                 <span className="font-medium hover:text-white transition-colors cursor-pointer">
-                  +91 9034145122
+                  +91 90341 45122
                 </span>
               </li>
               <li className="flex items-start gap-3 group">
