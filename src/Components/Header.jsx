@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Menu, X, Rocket } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import webzon from "../assets/webzon.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef(null);
+  const mobilePanelRef = useRef(null);
+  const navItems = ["Home", "About", "Services", "Portfolio", "Contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +18,67 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const gsap = window.gsap;
+    if (!gsap || !navRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from("[data-header-logo]", {
+        y: -18,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+      });
+      gsap.from("[data-header-nav-item]", {
+        y: -14,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.45,
+        delay: 0.1,
+        ease: "power2.out",
+      });
+      gsap.from("[data-header-cta]", {
+        y: -12,
+        opacity: 0,
+        duration: 0.5,
+        delay: 0.28,
+      });
+    }, navRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const gsap = window.gsap;
+    if (!gsap || !mobilePanelRef.current) return;
+
+    if (isMenuOpen) {
+      gsap.fromTo(
+        mobilePanelRef.current,
+        { y: -16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.32, ease: "power2.out" }
+      );
+      gsap.fromTo(
+        "[data-mobile-nav-item]",
+        { y: -8, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.06, duration: 0.24, delay: 0.05 }
+      );
+    }
+  }, [isMenuOpen]);
+
   return (
     <nav
+      ref={navRef}
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-xl"
+          ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-blue-100/70"
           : "bg-white/80 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section - Ab sirf Image hai jo poori height cover karegi */}
-          <Link to="/" className="flex items-center h-full py-2 group">
+          <Link to="/" data-header-logo className="flex items-center h-full py-2 group">
             <img
               src={webzon}
               alt="Webzon Logo"
@@ -37,22 +89,28 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-1">
-            {["Home", "About", "Services", "Portfolio", "Contact"].map(
-              (item) => (
-                <Link
+          <div className="hidden md:flex space-x-1 rounded-full border border-blue-100 bg-white/80 px-2 py-2 shadow-sm">
+            {navItems.map((item) => (
+                <NavLink
+                  data-header-nav-item
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-white hover:bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2.5 rounded-full transition-all font-semibold text-l"
+                  className={({ isActive }) =>
+                    `px-4 py-2 rounded-full transition-all font-semibold text-sm lg:text-base ${
+                      isActive
+                        ? "text-white bg-gradient-to-r from-blue-600 to-green-500 shadow-lg"
+                        : "text-gray-700 hover:text-blue-700 hover:bg-blue-50"
+                    }`
+                  }
                 >
                   {item}
-                </Link>
-              )
-            )}
+                </NavLink>
+              ))}
           </div>
 
           {/* Desktop CTA */}
           <Link
+            data-header-cta
             to="/contact"
             className={`hidden md:flex items-center gap-2 px-7 py-3 rounded-full font-bold transform transition-all duration-500 shadow-lg ${
               scrolled
@@ -88,22 +146,28 @@ const Header = () => {
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
         <div
+          ref={mobilePanelRef}
           id="mobile-navigation-menu"
-          className="md:hidden bg-white border-t shadow-2xl absolute w-full left-0 top-20"
+          className="md:hidden bg-white border-t border-blue-100 shadow-2xl absolute w-full left-0 top-20"
         >
           <div className="px-4 py-6 flex flex-col space-y-3">
-            {["Home", "About", "Services", "Portfolio", "Contact"].map(
-              (item) => (
-                <Link
+            {navItems.map((item) => (
+                <NavLink
+                  data-mobile-nav-item
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-white hover:bg-gradient-to-r from-blue-600 to-cyan-500 px-6 py-3 rounded-xl transition-all font-semibold text-base block"
+                  className={({ isActive }) =>
+                    `px-6 py-3 rounded-xl transition-all font-semibold text-base block ${
+                      isActive
+                        ? "text-white bg-gradient-to-r from-blue-600 to-green-500"
+                        : "text-gray-700 hover:text-blue-700 hover:bg-blue-50"
+                    }`
+                  }
                 >
                   {item}
-                </Link>
-              )
-            )}
+                </NavLink>
+              ))}
             <div className="pt-4">
               <Link
                 to="/contact"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   Menu,
   X,
@@ -27,17 +27,6 @@ import {
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeService, setActiveService] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Gradients updated to match Blue-Green Logo Theme
  const services = [
@@ -198,8 +187,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border-2 border-gray-100 hover:border-blue-200 overflow-hidden cursor-pointer"
-                onClick={() => setActiveService(index)}
+                className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border-2 border-gray-100 hover:border-blue-200 overflow-hidden"
               >
                 <div
                   className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${service.gradient} rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
