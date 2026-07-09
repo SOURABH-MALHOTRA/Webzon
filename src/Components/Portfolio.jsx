@@ -169,17 +169,17 @@ const Portfolio = () => {
           <div className="grid grid-cols-3 sm:grid-cols-3 gap-y-10 sm:gap-x-4">
             {[
               {
-                num: "30+",
+                num: "50+",
                 label: "Projects Completed",
                 icon: <CheckCircle className="w-10 h-10" />,
               },
               {
-                num: "25+",
+                num: "45+",
                 label: "Happy Clients",
                 icon: <Users className="w-10 h-10" />,
               },
               {
-                num: "98%",
+                num: "100%",
                 label: "Success Rate",
                 icon: <TrendingUp className="w-10 h-10" />,
               },

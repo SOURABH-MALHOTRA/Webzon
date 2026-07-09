@@ -151,12 +151,12 @@ const Services = () => {
     {
       icon: <TrendingUp className="w-10 h-10" />,
       title: "Proven Results",
-      desc: "30+ successful projects delivered",
+      desc: "50+ successful projects delivered",
     },
     {
       icon: <Star className="w-10 h-10" />,
       title: "Client Satisfaction",
-      desc: "98% client retention rate",
+      desc: "100% client retention rate",
     },
   ];
 
