@@ -12,13 +12,15 @@ import {
 } from "lucide-react";
 import gym from "../assets/gym.png"
 import Travel from "../assets/AITravel.png";
-import architect from "../assets/architect.png";
+import interior from "../assets/interior.png";
+import nestasia from "../assets/nestasia.png";
+import tjori from "../assets/tjori.png";
+import perfume from "../assets/perfume.png";
+import brownliving from "../assets/brownliving.png";
 import clothing from "../assets/clothing.png";
 import food from "../assets/food.png";
 import shoes from "../assets/shoes.png";
-import trade from "../assets/trade.png";
 import taxi from "../assets/TaxiService.png";
-import kerala from "../assets/kerla.png";
 import coaching from "../assets/coaching.png";
 import jewelry from "../assets/jewelry.png";
 import furniture from "../assets/furniture.png";
@@ -35,40 +37,72 @@ const Portfolio = () => {
   }, []);
 
   const projects = [
-    {
+       {
       id: 1,
+      title: "Premium Architecture & Interior Design Website",
+      image: interior,
+      link: "https://davinciya.com/",
+    },
+    {
+      id: 2,
+      title: "Ethnic Fashion & Lifestyle E-Commerce Platform",
+      image: tjori,
+      link: "https://www.tjori.com/",
+    },
+  
+     {
+      id: 3,
+      title: "Luxury Fragrance E-Commerce Platform",
+      image: perfume,
+      link: "https://snif.co/",
+    },
+    {
+      id: 4,
       title: "Footwear E-Commerce Brand",
       image: shoes,
       link: "https://hitz.co.in/",
     },
   
      {
-      id: 2,
+      id: 5,
       title: "E-Commerce Clothing Platform",
       image: clothing,
       link: "https://www.beyoung.in/",
     },
      {
-      id: 3,
+      id: 6,
       title: "Modern Gym & Fitness Website Design",
       image: gym,
       link: "https://www.pumpnationfitness.in/",
     },
+      {
+      id: 7,
+      title: "Premium Home Décor & Kitchenware E-Commerce Platform",
+      image: nestasia,
+      link: "https://nestasia.in/",
+    },
      {
-      id: 4,
+      id: 8,
       title: "E-Commerce Furniture Marketplace Platform",
       image: furniture,
       link: "https://www.furnishka.com/",
     },
      {
-      id: 5,
+      id: 9,
+      title: "Sustainable Lifestyle E-Commerce Marketplace",
+      image: brownliving,
+      link: "https://brownliving.in/",
+    },
+
+     {
+      id: 10,
       title: "Jewelry E-Commerce Platform",
       image: jewelry,
       link: "https://www.eternz.com/",
     },
    
       {
-      id: 6,
+      id:11,
       title: "AI-Powered Travel & Trip Planning Platform",
       image: Travel,
       link: "https://traveinstein.com/",
@@ -76,46 +110,27 @@ const Portfolio = () => {
       
   
      {
-      id: 7,
+      id: 12,
       title: "Cab Booking Service",
       image: taxi,
       link: "https://www.ranjitbrostaxi.com/",
     },
    
-   
-   {
-      id: 8,
-      title: "Coaching Institute Landing Page",
-      image: coaching,
-      link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
-    },
-   {
-      id: 9,
+     {
+      id: 13,
       title: "Food Ordering Website",
       image: food,
       link: "https://biryanibykilo.com/",
     },
-    {
-      id: 10,
-      title: "Architect Portfolio",
-      image: architect,
-      link: "https://malhotra-associates.vercel.app/",
-    },
-    {
-      id: 11,
-      title: "Travel & Tour Landing Page",
-      image: kerala,
-      link: "https://cyberroshan.github.io/Kerala-Plan-Tours.github.io/",
-    },
+   
+   {
+      id:14,
+      title: "Coaching Institute Landing Page",
+      image: coaching,
+      link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
+    }
   
-     {
-      id: 12,
-      title: "Financial Services & Investment Platform",
-      image: trade,
-      link: "https://unlistedsharewala.com/",
-    },
-     
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
