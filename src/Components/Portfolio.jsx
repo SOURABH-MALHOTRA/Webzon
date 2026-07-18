@@ -21,9 +21,9 @@ import clothing from "../assets/clothing.png";
 import food from "../assets/food.png";
 import shoes from "../assets/shoes.png";
 import taxi from "../assets/TaxiService.png";
-import coaching from "../assets/coaching.png";
 import jewelry from "../assets/jewelry.png";
 import furniture from "../assets/furniture.png";
+import vilvah from "../assets/vilvah.png"
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -41,68 +41,75 @@ const Portfolio = () => {
       id: 1,
       title: "Premium Architecture & Interior Design Website",
       image: interior,
-      link: "https://davinciya.com/",
+      link: "https://malik-decoration.vercel.app/",
     },
-    {
+      {
       id: 2,
+      title: "Organic Beauty & Personal Care Store",
+      image: vilvah,
+      link: "https://www.vilvahstore.com/",
+    },
+
+    {
+      id: 3,
       title: "Ethnic Fashion & Lifestyle E-Commerce Platform",
       image: tjori,
       link: "https://www.tjori.com/",
     },
   
      {
-      id: 3,
+      id: 4,
       title: "Luxury Fragrance E-Commerce Platform",
       image: perfume,
       link: "https://snif.co/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Footwear E-Commerce Brand",
       image: shoes,
       link: "https://hitz.co.in/",
     },
   
      {
-      id: 5,
+      id: 6,
       title: "E-Commerce Clothing Platform",
       image: clothing,
       link: "https://www.beyoung.in/",
     },
      {
-      id: 6,
+      id: 7,
       title: "Modern Gym & Fitness Website Design",
       image: gym,
       link: "https://www.pumpnationfitness.in/",
     },
       {
-      id: 7,
+      id: 8,
       title: "Premium Home Décor & Kitchenware E-Commerce Platform",
       image: nestasia,
       link: "https://nestasia.in/",
     },
      {
-      id: 8,
+      id: 9,
       title: "E-Commerce Furniture Marketplace Platform",
       image: furniture,
       link: "https://www.furnishka.com/",
     },
      {
-      id: 9,
+      id: 10,
       title: "Sustainable Lifestyle E-Commerce Marketplace",
       image: brownliving,
       link: "https://brownliving.in/",
     },
 
      {
-      id: 10,
+      id: 11,
       title: "Jewelry E-Commerce Platform",
       image: jewelry,
       link: "https://www.eternz.com/",
     },
    
       {
-      id:11,
+      id:12,
       title: "AI-Powered Travel & Trip Planning Platform",
       image: Travel,
       link: "https://traveinstein.com/",
@@ -110,25 +117,20 @@ const Portfolio = () => {
       
   
      {
-      id: 12,
+      id: 13,
       title: "Cab Booking Service",
       image: taxi,
       link: "https://www.ranjitbrostaxi.com/",
     },
    
      {
-      id: 13,
+      id: 14,
       title: "Food Ordering Website",
       image: food,
       link: "https://biryanibykilo.com/",
     },
    
-   {
-      id:14,
-      title: "Coaching Institute Landing Page",
-      image: coaching,
-      link: "https://cyberroshan.github.io/lawpreptutorial.github.io/",
-    }
+ 
   
   ]
 
