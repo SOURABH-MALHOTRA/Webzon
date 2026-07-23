@@ -125,8 +125,8 @@ const Home = () => {
         "Webzon transformed our vision for Hitz a footwear brand into a high converting e-commerce website. The seamless shopping experience reflects our brand identity. It enhanced customer trust.",
     },
     {
-      name: "Ankit Malhotra",
-      role: "Managing Director, Malik Decoration",
+      name: "Mohammad Arif",
+      role: "Director, Malik Decoration",
       content:
         "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malik Decoration that perfectly showcases our projects with a premium modern feel.",
     },
