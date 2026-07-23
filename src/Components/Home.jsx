@@ -126,9 +126,9 @@ const Home = () => {
     },
     {
       name: "Ankit Malhotra",
-      role: "Managing Director, Malhotra Associates",
+      role: "Managing Director, Malik Decoration",
       content:
-        "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malhotra Associates that perfectly showcases our projects with a premium modern feel.",
+        "As an architectural firm, aesthetics are everything. Webzon created a sophisticated portfolio website for Malik Decoration that perfectly showcases our projects with a premium modern feel.",
     },
     {
       name: "Parul Nagpal",
@@ -272,7 +272,7 @@ const Home = () => {
       </div>
 
       {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-700 via-blue-600 to-green-600 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-blue-700 via-blue-600 to-green-600 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/5"></div>
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="grid grid-cols-4 lg:grid-cols-4 gap-8 md:gap-12 text-center text-white justify-items-center">

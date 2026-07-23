@@ -20,14 +20,14 @@ const Header = () => {
       className={`fixed w-full z-50 transition-all duration-500 px-3 sm:px-4 md:px-6 pt-3`}
     >
       <div
-        className={`max-w-7xl mx-auto rounded-2xl sm:rounded-full transition-all duration-500 ${
+        className={`max-w-7xl mx-auto rounded-full transition-all duration-500 ${
           scrolled
             ? "bg-white/95 backdrop-blur-lg shadow-xl border border-gray-100"
             : "bg-white/80 backdrop-blur-md shadow-md"
         }`}
       >
         <div className="px-3 sm:px-5 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
+          <div className="flex justify-between items-center h-18 sm:h-20">
             {/* Logo Section */}
             <Link to="/" className="flex items-center h-full py-2 group shrink-0">
               <img
@@ -102,7 +102,7 @@ const Header = () => {
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-gray-700 hover:text-white hover:bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-3 rounded-xl transition-all font-semibold text-base block"
+                  className="text-gray-700 bg-gray-50 border border-gray-100 hover:text-white hover:bg-gradient-to-r from-blue-600 to-cyan-500 hover:border-transparent active:scale-95 px-5 py-3 rounded-full transition-all font-semibold text-base block text-center"
                 >
                   {item}
                 </Link>
@@ -112,7 +112,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className={`flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl font-bold shadow-lg transition-all duration-500 transform ${
+                className={`flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full font-bold shadow-lg transition-all duration-500 transform ${
                   scrolled
                     ? "bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white shadow-green-500/30"
                     : "bg-gradient-to-r from-blue-600 to-green-500 text-white shadow-blue-500/20"

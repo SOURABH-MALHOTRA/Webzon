@@ -166,7 +166,7 @@ const Portfolio = () => {
       </section>
 
       {/* Stats Section - Colors updated to Blue/Green */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <div className="grid grid-cols-3 sm:grid-cols-3 gap-y-10 sm:gap-x-4">
             {[
@@ -201,7 +201,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Grid - Border & Hover Colors updated */}
-      <section className="py-15 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (

@@ -99,7 +99,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision - Style Same as your original, just colors swapped */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Mission - Orange replaced with Blue */}
